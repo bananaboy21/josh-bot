@@ -3,7 +3,7 @@ import os
 from discord.ext import commands
 
 
-bot = commands.Bot(prefix="-", owner_id=277981712989028353)
+bot = commands.Bot(command_prefix="-", owner_id=277981712989028353)
 
 
 @bot.event
@@ -20,6 +20,8 @@ async def on_message(message):
         await message.channel.send("Hey! Mega Elite™ is not an invite friendly zone unless given permission by an Administrator!")
     elif message.content.lower() == "lol":
         await message.channel.send("XD")
+    elif "gay" in message.content.lower():
+        await message.channel.send("no u")
     else:
         await bot.process_commands(message)
         
