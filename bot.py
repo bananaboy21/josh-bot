@@ -7,6 +7,12 @@ bot = commands.Bot(command_prefix="-", owner_id=277981712989028353)
 
 
 @bot.event
+async def on_ready():
+    print("Bot is online, and READY TO ROLL!")
+    await bot.change_presence(activity=discord.Game(name="with Mega Elite™"))
+
+
+@bot.event
 async def on_message(message):
     if message.content.lower() == 'hi':
         await message.channel.send("Hiya! I'm a fun bot :D")
